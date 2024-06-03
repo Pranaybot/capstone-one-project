@@ -1,0 +1,62 @@
+/* oneway_trip.css */
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Flight card styles */
+.flight-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+/* Card title styles */
+.card-title {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Flight details list styles */
+.list-group-item {
+    border: none;
+    padding: 5px 0;
+}
+
+/* Book now form styles */
+.book-now-form, .round-trip-booking-form,
+.round-trip-arrival-booking-form {
+    margin-top: 15px;
+}
+
+/* Book now button styles */
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Spacing below Book Now buttons */
+.btn-primary + .flight-card {
+    margin-top: 15px;
+}
+
+h3 {
+    color:purple;
+    margin-bottom: 20px; /* Add some space below the paragraph */
+}
+
+

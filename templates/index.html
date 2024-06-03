@@ -1,0 +1,331 @@
+{% extends 'base.html' %}
+
+{% block link %}
+    <link rel="stylesheet" type="text/css"
+          href="{{ url_for('static', filename='css/index_forms.css')}}">
+{% endblock %}
+
+{% block title %}Newgen Airlines - Home Page{% endblock %}
+
+{% block script %}
+    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js" defer></script>
+    <script src="https://mediafiles.botpress.cloud/34203050-7c3e-473d-a008-55b95809a851/webchat/config.js" defer></script>
+{% endblock %}
+
+
+{% block content %}
+<div id="carouselExampleIndicators" class="z-0 position-relative carousel slide" data-ride="carousel" data-interval="7500">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="static/images/carousel_images/fort-lauderdale-beach.jpeg" alt="Fort Lauderdale image">
+      <div class="top-left" id="first-image-text">Your next vacation is just around the corner</div>
+      <div class="top-left-bottom" id="first-image-link">Book a flight to Fort Lauderdale &#9992;</div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="static/images/carousel_images/yosemite-national-park.jpeg" alt="Yosemite National Park image">
+      <div class="top-left" id="second-image-text">Expand your horizon of the world</div>
+      <div class="top-left-bottom" id="second-image-link">Book a trip to a National Park &#9992;</div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+  <div class="container main-container z-1 position-absolute ">
+    <div class="tabbed-container">
+      <ul class="nav nav-tabs" id="myTab" role="tablist" data-mouse="hover">
+          <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="round-trip-tab" data-toggle="tab"
+                      data-target="#round-trip-tab-pane" type="button"
+                      aria-controls="round-trip-tab-pane" aria-selected="true">Round Trip
+              </button>
+          </li>
+          <li class="nav-item" role="presentation">
+              <button class="nav-link" id="oneway-trip-tab" data-toggle="tab"
+                      data-target="#oneway-trip-tab-pane" type="button"
+                      aria-controls="oneway-trip-tab-pane" aria-selected="false">Oneway Trip
+              </button>
+          </li>
+          <li class="nav-item" role="presentation">
+              <button class="nav-link" id="trips-tab" data-toggle="tab"
+                      data-target="#trips-tab-pane" type="button"
+                      aria-controls="trips-tab-pane" aria-selected="false">My Trips
+              </button>
+          </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="round-trip-tab-pane"
+                 role="tabpanel" aria-labelledby="round-trip-tab" tabindex="0">
+                <form class="roundTripDepartureForm" action="/round_trip_departure" method="get">
+                    <div class="row form-row">
+                        <div class="form-group col-md-3" id="first-group">
+                            <label for="fromAirportCode">From</label>
+                            <input type="text" class="form-control" id="fromAirportCode"
+                                name="fromAirportCode" required>
+                        </div>
+                        <div class="form-group col-md-3" id="second-group">
+                            <label for="toAirportCode">To</label>
+                            <input type="text" class="form-control" id="toAirportCode"
+                                name="toAirportCode" required>
+                        </div>
+                        <div class="form-group col-md-3" id="third-group">
+                            <label for="fromDate">Depart</label>
+                            <input type="text" class="form-control" id="fromDate"
+                                name="fromDate" placeholder="yyyy-mm-dd" required>
+                        </div>
+                        <div class="form-group col-md-3" id="fourth-group">
+                          <label for="toDate">Return</label>
+                          <input type="text" class="form-control" id="toDate"
+                                 name="toDate" placeholder="yyyy-mm-dd"
+                                 required>
+                        </div>
+                    </div>
+                    <div class="row second-row">
+                        <div class="form-group col-md-4" id="fifth-group">
+                            <label for="numAdults"></label>
+                            <select id="numAdults" class="form-control" name="numAdults" required>
+                                <option selected>Choose number of adults</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4" id="sixth-group">
+                            <label for="numChildren"></label>
+                            <select id="numChildren" class="form-control" name="numChildren" required>
+                                <option selected>Choose number of children</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4" id="seventh-group">
+                            <label for="numInfants"></label>
+                            <select id="numInfants" class="form-control" name="numInfants" required>
+                                <option selected>Choose number of infants</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row third-row">
+                        <div class="form-group col-md-3" id="eighth-group">
+                            <label for="cabinClass">Cabin class</label>
+                            <input type="text" class="form-control" id="cabinClass"
+                                 name="cabinClass" required>
+                        </div>
+                        <div class="form-group col-md-3" id="ninth-group">
+                            <label for="currencyCode">Currency code</label>
+                            <input type="text" class="form-control" id="currencyCode"
+                                 name="currencyCode" required>
+                        </div>
+                        <div class="form-group col-md-3" id="tenth-group">
+                            <label for="regionCode">Region code</label>
+                            <input type="text" class="form-control" id="regionCode"
+                                 name="regionCode">
+                        </div>
+                        <div class="form-group col-md-3" id="eleventh-group">
+                            <input type="submit" value="Search" id="round-trip-submit-btn">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="tab-pane fade" id="oneway-trip-tab-pane"
+                 role="tabpanel" aria-labelledby="oneway-trip-tab" tabindex="0">
+                <form class="oneWayTripForm" action="/oneway_trip" method="get">
+                    <div class="row form-row">
+                        <div class="form-group col-md-4" id="oneway-first-group">
+                            <label for="oneWayFromAirportCode">From</label>
+                            <input type="text" class="form-control" id="oneWayFromAirportCode"
+                                name="oneWayFromAirportCode" required>
+                        </div>
+                        <div class="form-group col-md-4" id="oneway-second-group">
+                            <label for="oneWayToAirportCode">To</label>
+                            <input type="text" class="form-control" id="oneWayToAirportCode"
+                                name="oneWayToAirportCode" required>
+                        </div>
+                        <div class="form-group col-md-4" id="oneway-third-group">
+                            <label for="oneWayFromDate">Depart</label>
+                            <input type="text" class="form-control" id="oneWayFromDate"
+                                name="oneWayFromDate" placeholder="yyyy-mm-dd" required>
+                        </div>
+                    </div>
+                    <div class="row second-row">
+                        <div class="form-group col-md-4" id="oneway-fourth-group">
+                          <label for="oneWayNumAdults"></label>
+                          <select id="oneWayNumAdults" class="form-control" name="oneWayNumAdults" required>
+                            <option selected>Choose number of adults</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-md-4" id="oneway-fifth-group">
+                          <label for="oneWayNumChildren"></label>
+                          <select id="oneWayNumChildren" class="form-control" name="oneWayNumChildren" required>
+                            <option selected>Choose number of children</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-md-4" id="oneway-sixth-group">
+                          <label for="oneWayNumInfants"></label>
+                          <select id="oneWayNumInfants" class="form-control" name="oneWayNumInfants" required>
+                            <option selected>Choose number of infants</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                          </select>
+                        </div>
+                    </div>
+                    <div class="row third-row">
+                        <div class="form-group col-md-3" id="oneway-seventh-group">
+                            <label for="oneWayCabinClass">Cabin class</label>
+                            <input type="text" class="form-control" id="oneWayCabinClass"
+                                 name="oneWayCabinClass" required>
+                        </div>
+                        <div class="form-group col-md-3" id="oneway-eighth-group">
+                          <label for="oneWayCurrencyCode">Currency code</label>
+                          <input type="text" class="form-control" id="oneWayCurrencyCode"
+                                 name="oneWayCurrencyCode" required>
+                        </div>
+                        <div class="form-group col-md-3" id="oneway-ninth-group">
+                          <label for="oneWayRegionCode">Region code</label>
+                          <input type="text" class="form-control" id="oneWayRegionCode"
+                             name="oneWayRegionCode">
+                        </div>
+                        <div class="form-group col-md-3" id="oneway-eleventh-group">
+                            <input type="submit" value="Search" id="oneway-trip-submit-btn">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="tab-pane fade" id="trips-tab-pane"
+                 role="tabpanel" aria-labelledby="trips-tab" tabindex="0">
+                <form class="trips_form" action="/trips" method="get">
+                    <div class="form-group col-md-12" id="trips-form-ticket-num">
+                          <label for="ticketNumber">Ticket number</label><span class="conf-num-dot">•</span>
+                          <input type="text" class="form-control" id="ticketNumber"
+                             name="ticketNumber" required>
+                    </div>
+                    <div class="form-group col-md-12" id="trips-form-ticket-type">
+                        <label for="ticketType">Ticket Type</label><span class="conf-num-dot">•</span>
+                        <input type="text" class="form-control" id="ticketType"
+                         name="ticketType" required>
+                    </div>
+                    <div class="form-group col-md-4" id="trips-form-submit">
+                        <input type="submit" value="Search" id="trips-submit-btn">
+                    </div>
+                </form>
+            </div>
+      </div>
+    </div>
+    <div class="container current-offers">
+        <div class="row">
+            <h3 id="cur-offers">Current offers</h3>
+        </div>
+        <div class="row" id="smartphone-row">
+            <div class="col first-col">
+                <img src="static/images/airline_offers/airline_app.jpg" class="img-fluid" alt="Airline app image" id="phone-img">
+            </div>
+            <div class="col second-col">
+                <h4>Go straight to your flight</h4>
+                <p>Use Newgen app to download mobile boarding passes, check
+                    in to your flight and much more</p>
+                <p class="offer-link">Download the Newgen app</p>
+            </div>
+        </div>
+        <div class="row" id="cruise-dinner-row">
+            <div class="col first-col">
+                <img src="static/images/airline_offers/cruise_dinner.jpeg" class="img-fluid" alt="Dinner cruise image" id="cruise-dinner-img">
+            </div>
+            <div class="col second-col">
+                <h4>Dine with others to earn more miles</h4>
+                <p>Earn up to NNewgen® miles per $2 spent on takeout,
+                    dine-in, and delivery orders</p>
+                <p class="offer-link">Join NNewgen Dining℠ for free</p>
+            </div>
+        </div>
+        <div class="row" id="meeting-row">
+            <div class="col first-col">
+                <img src="static/images/airline_offers/global_business.jpeg" class="img-fluid" alt="Dinner cruise image" id="meeting-img">
+            </div>
+            <div class="col second-col">
+                <h4>Business travel that works for you</h4>
+                <p>Entrepreneurs can earn more in the NNewgen Business™ program</p>
+                <p class="offer-link">Learn more about the program</p>
+            </div>
+        </div>
+    </div>
+    <div class="container other-offers">
+        <div class="row">
+            <div class="col first-col" id="other-offers-col">
+                <h4 id="news-offers-heading">News and offers</h4>
+                <p>Palisades Tahoe Lift Tickets</p>
+                <p class="offer-link">More treats</p>
+            </div>
+            <div class="col second-col" id="memory-offers-col">
+                <div class="row" id="memory-title-row">
+                    <h4>Create more memories</h4>
+                </div>
+                <div class="row" id="memory-img-row">
+                    <img src="static/images/other_offers/athens_ancient_building.jpeg" class="img-fluid"
+                         alt="Athens building cruise image" id="athens-building-img"
+                         width="155">
+                </div>
+                <div class="row" id="memory-links-row">
+                    <p>Gift or buy miles for new adventures</p>
+                    <p class="offer-link">View your offer</p>
+                </div>
+            </div>
+            <div class="col third-col" id="bonus-offers-col">
+                <div class="row" id="miles-title-row">
+                    <h4>Earn 60,000 bonus miles</h4>
+                </div>
+                <div class="row" id="miles-img-row">
+                    <img src="static/images/other_offers/toy_airplane.jpg" class="img-fluid"
+                        alt="Toy airplane image" id="toy-airplane-img"
+                        width="155">
+                </div>
+                <div class="row" id="miles-links-row">
+                    <p>Plus, second checked bag is free on domestic Newgen
+                        Airlines itineraries.</p>
+                    <p class="offer-link">Learn more</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

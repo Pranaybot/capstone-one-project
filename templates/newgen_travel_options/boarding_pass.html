@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block title %}Newgen Airlines - Boarding pass{% endblock %}
+
+
+{% block content %}
+ <div class="container boarding-pass">
+    <div class="col boarding-pass-body-ctr" id="image-nav-col">
+        <img src="static/images/other_images/mobile_app_boarding.jpg" alt="Mobile app boarding image"
+             id="mobile-app-boarding-img" class="img-fluid">
+        <div class="tabbed-container">
+          <ul class="nav nav-tabs" id="myMobileTab" role="tablist" data-mouse="hover">
+              <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="newgen-tab" data-toggle="tab"
+                          data-target="#" type="button" aria-controls="newgen-tab-pane"
+                          aria-selected="false">Newgen app
+                  </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="wifi-tab" data-toggle="tab"
+                          data-target="#" type="button" aria-controls="wifi-tab-pane"
+                          aria-selected="false">Wi-Fi
+                  </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="inflight-entertainment-tab"
+                          data-toggle="tab" data-target="#" type="button"
+                          aria-controls="inflight-entertainment-tab-pane"
+                          aria-selected="false">Inflight entertainment
+                  </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="notifications-tab" data-toggle="tab"
+                          data-target="#" type="button"
+                          aria-controls="notifications-tab-pane"
+                          aria-selected="false">Flight notifications
+                  </button>
+              </li>
+          </ul>
+        </div>
+    </div>
+    <div class="col boarding-pass-body-ctr" id="first-col">
+        <h3>Mobile boarding pass</h3>
+        <p id="boarding-pass-info">How to get your mobile boarding pass:</p>
+        <div class="row mobile-app-ol">
+            <ol type="1">
+                <li>Go to nn.com or your mobile app and choose 'Email with Mobile option'</li>
+                <li>Follow the link in your email</li>
+                <li>Save your boarding pass to your device for easier access through security</li>
+            </ol>
+        </div>
+        <p id="mobile-passes-info">See if your airport accepts mobile passes.</p>
+        <a>Airport information</a>
+    </div>
+    <div class="col boarding-pass-body-ctr" id="second-col">
+        <h3>Connect anytime and anywhere in the world</h3>
+        <p id="download-app-info">Download our free app and manage your travel on the go. From
+            booking and seats to boarding passes and airport maps, we're
+            with you every step of the way. Plus, now you can speak directly
+            with a team member or get 24/7 virtual help through our chat tool.</p>
+        <a id="newgen-app">Newgen Airlines app</a>
+        <h4>Download the app</h4>
+        <div class="app-store-div">
+            <p id="app-store">Download from the App Store</p>
+            <p id="google-play-store">Download from the Google Play store</p>
+        </div>
+    </div>
+    <div class="col boarding-pass-body-ctr" id="third-col">
+        <h3>Be notified about your flights</h3>
+        <p id="flight-notice-info">Sign up or change your preferences from the
+            ‘FlightNotice’ link in your NNewgen® profile to get alerts for every
+            flight by email or text.</p>
+        <h4>Choose alerts for:</h4>
+        <div class="row mobile-app-ul">
+            <ul style="list-style-type:square;">
+                <li>Flight departure reminders</li>
+                <li>Travel cancellations and delays</li>
+                <li>Flight terminal gate changes</li>
+            </ul>
+        </div>
+        <a>Sign up for FlightNotice</a>
+    </div>
+ </div>
+{% endblock %}
