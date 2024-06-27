@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block link %}
+    <link rel="stylesheet" type="text/css"
+          href="../../../../static/css/trip_reviews_and_payments.css">
+{% endblock %}
+
+{% block title %}Newgen Airlines - Round Trip Reviews{% endblock %}
+
+
+{% block content %}
+<div class="container has-reviews {% if not reviews %}has-warning-background{% endif %}">
+    {% if reviews %}
+        {% for review in reviews %}
+            <div class="card border-primary">
+              <div class="card-body">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Round Trip Payment ID:
+                      <span id="round_trip_payment_tab">{{ rating.oneway_trip_review_payment_id }}</span></li>
+                  <li class="list-group-item">Round Trip Review ID:
+                      <span id="round_trip_review_tab">{{ rating.oneway_trip_review_payment_id }}</span></li>
+                  <li class="list-group-item">Rating:
+                      <span id="round_trip_review_rating">{{ review.rating }}</span></li>
+                  <li class="list-group-item">Review:
+                      <span id="round_trip_review">{{ review.review }}</span></li>
+                  <li class="list-group-item">Review date:
+                      <span id="round_trip_review_date">{{ review.timestamp }}</span></li>
+                </ul>
+              </div>
+              <div class="card-footer">
+                <a href="{{ url_for('round_trip_reviews.round_trip_reviews_destroy', review_id=review.id) }}" class="btn btn-primary float-end"
+                   id="delete_button">Delete Review</a>
+                <a href="{{ url_for('round_trip_reviews.round_trip_reviews_update', review_id=review.id) }}" class="btn btn-primary float-end"
+                   id="edit_button">Edit Review</a>
+              </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <h1>No Round Trip Reviews Yet!</h1>
+        <p>It looks like there aren't any reviews for round trips at this time. Be the
+            first to share your experience!</p>
+        <p>If you've recently completed a round trip, consider leaving a review to help others
+            make informed decisions.</p>
+    {% endif %}
+</div>
+{% endblock %}

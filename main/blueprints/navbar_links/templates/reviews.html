@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block link %}
+    <link rel="stylesheet" type="text/css"
+          href="/navbar_links/static/css/payments_reviews.css">
+{% endblock %}
+
+{% block title %}Newgen Airlines - Reviews page{% endblock %}
+
+
+{% block content %}
+<div class="container reviews">
+    <div class="row reviews-body-ctr" id="main-row">
+        <div class="col reviews-body-ctr" id="first-col">
+            <h2>Flight Review History</h2>
+        </div>
+    </div>
+    <div class="row reviews-body-ctr" id="first-row">
+        <div class="col-md-6 reviews-body-ctr" id="second-col">
+            <h3>One Way Reviews</h3>
+            <img src="/navbar_links/static/images/flight_trip/one_way_reviews.jpg"
+                 alt="One way review image" id="oneway-review-img">
+            <p>Search for your one-way trip reviews</p>
+            <a href="{{ url_for('oneway_trip_reviews.oneway_trip_reviews') }}"
+               class="btn btn-primary">Search</a>
+        </div>
+        <div class="col-md-6 reviews-body-ctr" id="third-col">
+            <h3>Round Trip Reviews</h3>
+            <img src="/navbar_links/static/images/flight_trip/round_trip_reviews.jpg"
+                 alt="Round trip reviews image" id="round-trip-reviews-img">
+            <p>Search for your round trip reviews</p>
+            <a href="{{url_for('round_trip_reviews.round_trip_reviews')}}"
+               class="btn btn-primary"><span id="search-reviews">Search</span>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

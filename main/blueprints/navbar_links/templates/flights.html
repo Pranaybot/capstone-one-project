@@ -1,0 +1,184 @@
+{% extends 'base.html' %}
+
+{% block link %}
+    <link rel="stylesheet" type="text/css"
+          href="/navbar_links/static/css/flights.css">
+{% endblock %}
+
+{% block title %}Newgen Airlines - Flights{% endblock %}
+
+
+{% block content %}
+<div class="container flight-forms">
+    <div class="row">
+        <div class="col-md-6" id="first-form">
+          <h2 class="join-message">Search for round-trip flights</h2>
+          <form class="oneWayTripForm"
+                action="{{ url_for('flight_options.oneway_trip') }}" method="get">
+            <div class="row form-row">
+                <div class="form-group col-md-6" id="oneway-first-group">
+                    <label for="oneWayFromAirportCode">From</label>
+                    <input type="text" class="form-control" id="oneWayFromAirportCode"
+                        name="oneWayFromAirportCode" required>
+                </div>
+                <div class="form-group col-md-6" id="oneway-second-group">
+                    <label for="oneWayToAirportCode">To</label>
+                    <input type="text" class="form-control" id="oneWayToAirportCode"
+                        name="oneWayToAirportCode" required>
+                </div>
+                <div class="form-group col-md-6" id="oneway-third-group">
+                    <label for="oneWayFromDate">Depart</label>
+                    <input type="text" class="form-control" id="oneWayFromDate"
+                        name="oneWayFromDate" required>
+                </div>
+                <div class="form-group col-md-6" id="oneway-fourth-group">
+                  <label for="oneWayNumAdults"></label>
+                  <select id="oneWayNumAdults" class="form-control" name="oneWayNumAdults" required>
+                    <option selected>Choose number of adults</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-6" id="oneway-fifth-group">
+                  <label for="oneWayNumChildren"></label>
+                  <select id="oneWayNumChildren" class="form-control" name="oneWayNumChildren" required>
+                    <option selected>Choose number of children</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-6" id="oneway-sixth-group">
+                  <label for="oneWayNumInfants"></label>
+                  <select id="oneWayNumInfants" class="form-control" name="oneWayNumInfnats" required>
+                    <option selected>Choose number of infants</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-6" id="oneway-seventh-group">
+                    <label for="oneWayCabinClass">Cabin class</label>
+                    <input type="text" class="form-control" id="oneWayCabinClass"
+                         name="oneWayCabinClass" required>
+                </div>
+                <div class="form-group col-md-6" id="oneway-eighth-group">
+                  <label for="oneWayCurrencyCode">Currency code</label>
+                  <input type="text" class="form-control" id="oneWayCurrencyCode"
+                         name="oneWayCurrencyCode" required>
+                </div>
+                <div class="form-group col-md-6" id="oneway-ninth-group">
+                  <label for="oneWayRegionCode">Region code</label>
+                  <input type="text" class="form-control" id="oneWayRegionCode"
+                     name="oneWayRegionCode">
+                </div>
+                <div class="form-group col-md-6" id="oneway-eleventh-group">
+                    <input type="submit" value="Search" id="oneway-trip-submit-btn">
+                </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-6" id="second-form">
+            <h2 class="join-message">Search for one-way flights</h2>
+            <form class="roundTripDepartureForm"
+               action="{{ url_for('flight_options.round_trip_departure') }}" method="get">
+                <div class="row form-row">
+                    <div class="form-group col-md-6" id="first-group">
+                        <label for="fromAirportCode">From</label>
+                        <input type="text" class="form-control" id="fromAirportCode"
+                            name="fromAirportCode" required>
+                    </div>
+                    <div class="form-group col-md-6" id="second-group">
+                        <label for="toAirportCode">To</label>
+                        <input type="text" class="form-control" id="toAirportCode"
+                            name="toAirportCode" required>
+                    </div>
+                    <div class="form-group col-md-6" id="third-group">
+                        <label for="fromDate">Depart</label>
+                        <input type="text" class="form-control" id="fromDate"
+                            name="fromDate" required>
+                    </div>
+                    <div class="form-group col-md-6" id="fourth-group">
+                      <label for="toDate">Return</label>
+                      <input type="text" class="form-control" id="toDate"
+                             name="toDate" required>
+                    </div>
+                    <div class="form-group col-md-6" id="fifth-group">
+                        <label for="numAdults"></label>
+                        <select id="numAdults" class="form-control" name="numAdults" required>
+                            <option selected>Choose number of adults</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6" id="sixth-group">
+                        <label for="numChildren"></label>
+                        <select id="numChildren" class="form-control" name="numChildren" required>
+                            <option selected>Choose number of children</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6" id="seventh-group">
+                        <label for="numInfants"></label>
+                        <select id="numInfants" class="form-control" name="numInfants" required>
+                            <option selected>Choose number of infants</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6" id="eighth-group">
+                        <label for="cabinClass">Cabin class</label>
+                        <input type="text" class="form-control" id="cabinClass"
+                             name="cabinClass" required>
+                    </div>
+                    <div class="form-group col-md-6" id="ninth-group">
+                        <label for="currencyCode">Currency code</label>
+                        <input type="text" class="form-control" id="currencyCode"
+                             name="currencyCode" required>
+                    </div>
+                    <div class="form-group col-md-6" id="tenth-group">
+                        <label for="regionCode">Region code</label>
+                        <input type="text" class="form-control" id="regionCode"
+                             name="regionCode">
+                    </div>
+                    <div class="form-group col-md-6" id="eleventh-group">
+                        <input type="submit" value="Search" id="round-trip-submit-btn">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+

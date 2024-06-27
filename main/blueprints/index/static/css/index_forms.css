@@ -1,0 +1,57 @@
+
+.nav.nav-tabs button#round-trip-tab, .nav.nav-tabs button#oneway-trip-tab,
+.nav.nav-tabs button#trips-tab {
+        padding-left:6.34em;
+        padding-right:6.34em;
+}
+
+@media screen and (max-width:1199px) {
+
+    .nav.nav-tabs button#round-trip-tab, .nav.nav-tabs button#oneway-trip-tab,
+    .nav.nav-tabs button#trips-tab {
+        padding-left:5.094em;
+        padding-right:5.094em;
+    }
+}
+
+@media screen and (max-width: 991px){
+
+    #round-trip-submit-btn, #oneway-trip-submit-btn, #trips-submit-btn {
+        padding: 2px 24px 2px 24px;
+    }
+
+    #carouselExampleIndicators {
+        margin: 0.34em auto 63em auto;
+    }
+
+    .nav.nav-tabs button#round-trip-tab, .nav.nav-tabs button#oneway-trip-tab,
+    .nav.nav-tabs button#trips-tab {
+        padding-left:3.2085em;
+        padding-right:3.2085em;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    #carouselExampleIndicators {
+        margin: 0.34em auto 123em auto;
+    }
+
+    .nav.nav-tabs button#round-trip-tab, .nav.nav-tabs button#oneway-trip-tab,
+    .nav.nav-tabs button#trips-tab {
+        padding-left:1.417em;
+        padding-right:1.417em;
+    }
+
+}
+
+
+@media screen and (max-width: 536px) {
+
+    .nav.nav-tabs button#round-trip-tab, .nav.nav-tabs button#oneway-trip-tab,
+    .nav.nav-tabs button#trips-tab {
+        padding-left:1.268em;
+        padding-right:1.268em;
+    }
+
+}

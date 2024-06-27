@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block link %}
+    <link rel="stylesheet" type="text/css"
+          href="/user/static/css/login_signup.css">
+{% endblock %}
+
+{% block title %}Newgen Airlines - Login/Signup page{% endblock %}
+
+
+{% block content %}
+<div class="container login-signup">
+    <div class="row login-signup-body-ctr" id="main-row">
+        <div class="col login-signup-body-ctr" id="first-col">
+            <h2>What's Happening?</h2>
+        </div>
+    </div>
+    <div class="row login-signup-body-ctr" id="first-row">
+        <div class="col-md-6 login-signup-body-ctr" id="second-col">
+            <h3>New to Newgen?</h3>
+            <img src="/user/static/images/login_and_signup/dream_vacation_image.jpg"
+                 alt="Dream vacation image" id="vacation-img">
+            <p>Sign up now to book your dream vacation!</p>
+            <a href="{{url_for('user.signup')}}" class="btn btn-primary">Sign up</a>
+        </div>
+        <div class="col-md-6 login-signup-body-ctr" id="third-col">
+            <h3>Already have an account?</h3>
+            <img src="/user/static/images/login_and_signup/journey_image.jpg"
+                 alt="Journey image" id="journey-img">
+            <p>Log in to continue your journeys!</p>
+            <a href="{{url_for('user.login')}}" class="btn btn-primary">
+                <span id="log-in">Log in</span></a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

@@ -1,0 +1,91 @@
+
+/* Enhancing the overall layout */
+.row.justify-content-md-center {
+    margin-top: 8em;
+}
+
+.col-md-7.col-lg-5 {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2.payment-message,
+h2.review-message,
+h2.round-trip-payment-message,
+h2.round-trip-review-message {
+    margin-bottom: 1.73em;
+    color: #343a40;
+    font-weight: 700;
+}
+
+.navbar-brand {
+    margin-left: 22em;
+}
+
+.container.footer, .footer-outer-container {
+    margin-top:3.62em;
+}
+
+#user_form input.form-control, #new_payment_form input.form-control,
+#new_review_form input.form-control, #round_trip_new_payment_form input.form-control,
+#round_trip_new_review_form input.form-control{
+      font-size: 18px;
+      font-weight: bold;
+      padding: 12px;
+      margin-top: 1em;
+      margin-bottom:1em;
+}
+
+.row.justify-content-md-center {
+    margin-top:8em;
+}
+
+.join-message, .payment-message, .review-message,
+.round-trip-payment-message, .round-trip-review-message{
+    margin-bottom:1.73em;
+}
+
+.btn.btn-primary.btn-lg.btn-block, .btn.btn-primary.btn-block.btn-lg {
+    margin-top:2.45em;
+}
+
+@media screen and (max-width:1199px) {
+
+    .navbar-brand {
+        margin-left: 10em;
+    }
+
+}
+
+
+@media screen and (max-width: 991px) {
+
+    .navbar-toggler {
+        margin-right:13em;
+    }
+
+    #first-nav, #second-nav, #third-nav, .nav-item.dropdown, #login-button{
+        margin-left:12.4em;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+
+    .navbar-toggler {
+        margin-right:12.6em;
+    }
+
+    .navbar-brand {
+        margin-left: 7.7em;
+    }
+
+    #first-nav, #second-nav, #third-nav, .nav-item.dropdown, #login-button{
+        margin-left:9.78em;
+    }
+
+
+}
+

@@ -16,3 +16,4 @@ python-dotenv==1.0.1
 currency-symbols==2.0.3
 email-validator==2.1.1
 gunicorn==22.0.0
+pytest==8.2.2

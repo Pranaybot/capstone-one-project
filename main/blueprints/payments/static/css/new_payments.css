@@ -1,0 +1,22 @@
+
+h2.payment-message, h2.round-trip-payment-message {
+    margin-bottom: 1.73em;
+    color: #343a40;
+    font-weight: 700;
+}
+
+.container.footer, .footer-outer-container {
+    margin-top:3.62em;
+}
+
+#new_payment_form input.form-control, #round_trip_new_payment_form input.form-control {
+      font-size: 18px;
+      font-weight: bold;
+      padding: 12px;
+      margin-top: 1em;
+      margin-bottom:1em;
+}
+
+.payment-message, .round-trip-payment-message {
+    margin-bottom:1.73em;
+}

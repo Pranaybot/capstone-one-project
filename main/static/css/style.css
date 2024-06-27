@@ -1,0 +1,793 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container.main-body {
+    margin-bottom:1em;
+}
+
+.navbar-brand {
+    margin-left: 20.18em;
+    margin-right: -1.83em;
+}
+
+.navbar-nav.mr-auto {
+    margin: auto;
+}
+
+#newgen-logo {
+    border-radius: 5px;
+    margin-right: 0.3em;
+}
+
+#newgen-title {
+    font-family: American TypeWriter;
+}
+
+nav.navbar.navbar-expand-lg.navbar-light.bg-light{
+    background: #F5EBE9 !important;
+    margin-left: -24.76em;
+    margin-right: -25.45em;
+}
+
+#login-button, #logout-button {
+    background: #4B81D6;
+    border-radius: 5px;
+    padding-left:0.3em;
+    padding-right:0.3em;
+}
+
+#first-nav, #second-nav, #third-nav, .nav-item.dropdown, #login-button{
+    margin-left:8em;
+}
+
+#logout-button {
+    margin-left:7.3em;
+}
+
+.user-full-name {
+    margin:0.434em auto 1em 51em;
+}
+
+#first-link:hover, #second-link:hover, #third-link:hover, #navbarDropdown:hover {
+    background: #EEA597;
+    border-radius: 5px;
+    padding: 0.17em;
+}
+
+#first-link:active, #second-link:active, #third-link:active, #navbarDropdown:active {
+    background: #F48670;
+}
+
+#carouselExampleIndicators {
+    margin: 0.34em auto 85em auto;
+}
+
+.d-block.w-100 {
+    width: 1100px;
+    height: 620px !important;
+}
+
+.d-block.w-100 {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.carousel-control-prev:link, .carousel-control-next:link,
+.carousel-control-prev:hover, .carousel-control-next:hover{
+    width: 7%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: #D3D3D3;
+}
+
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    background: #7B7E82;
+}
+
+.top-left {
+  position: absolute;
+  top: 1.6em;
+  left: 2.45em;
+}
+
+.top-left-bottom {
+  position: absolute;
+  top: 12.4em;
+  left: 6.7em;
+}
+
+#first-image-text {
+    width: 11em;
+}
+
+#second-image-text {
+    width: 8.8em;
+}
+
+#first-image-text, #first-image-link {
+    color: #800000;
+}
+
+#second-image-text, #second-image-link {
+    color:#FFF5EE;;
+}
+
+#first-image-text, #second-image-text {
+    font-size:3.4em;
+    line-height:1.3em;
+}
+
+#first-image-link, #second-image-link {
+    font-size:1.28em;
+}
+
+.container.main-container {
+    margin:-10em 7em -10em 7em;
+    width: 54.7em;
+}
+
+.tabbed-container {
+    border-radius:5px;
+    background: white;
+}
+
+.nav.nav-tabs li {
+    margin-left:0em;
+    background: #F0F0F0;
+}
+
+.nav.nav-tabs button {
+    padding-left:4.032em;
+    padding-right:4.032em;
+    cursor: pointer;
+}
+
+#round-trip-submit-btn {
+    margin-top:32px;
+    margin-bottom: 45px;
+}
+
+#oneway-trip-submit-btn {
+    margin-top:32px;
+}
+
+#trips-submit-btn {
+    margin-top:27px;
+}
+
+#round-trip-submit-btn, #trips-submit-btn, #flight-status-submit-btn, #oneway-trip-submit-btn {
+    padding: 2px 46px 2px 46px;
+}
+
+#flight-status-submit-btn {
+    margin-top:32px;
+}
+
+#round-trip-submit-btn, #oneway-trip-submit-btn, #trips-submit-btn, #flight-status-submit-btn {
+    color: white;
+    background: #1E90FF;
+    border: 5px solid #1E90FF;
+    border-radius: 5px;
+}
+
+.conf-num-dot, .last-name-dot {
+    color: #C41E3A;
+}
+
+.container.current-offers, .container.other-offers {
+    margin-top:6em;
+}
+
+#cur-offers {
+    margin-bottom:1.3em;
+}
+
+#phone-img, #cruise-dinner-img, #meeting-img, #other-offers-col {
+    margin-left:-1em;
+}
+
+#smartphone-row, #cruise-dinner-row {
+    margin-bottom: 2em;
+}
+
+.offer-link {
+    color:#4B81D6;
+}
+
+.offer-link:hover {
+    cursor: pointer;
+    text-decoration: underline #4B81D6;
+}
+
+.offer-link:active{
+    text-decoration: underline purple;
+}
+
+#news-offers-heading {
+    margin-bottom:1.05em;
+}
+
+#athens-building-img, #toy-airplane-img {
+    border-radius:6px;
+}
+
+#memory-links-row, #miles-links-row {
+    margin-top:2em;
+}
+
+#memory-links-row {
+    width:70%;
+}
+
+.container.footer, .footer-outer-container {
+    margin-left: -12.92em;
+    margin-right: -40em;
+    margin-bottom:-3em;
+    background: gray;
+}
+
+hr {
+    width:14em;
+}
+
+.col.help {
+    margin-left:27em;
+}
+
+.col.help, .col.newgen-info {
+    margin-right:-34.7em;
+}
+
+.col.help, .col.newgen-info, .col.extras {
+    margin-top: 2.3em;
+    margin-bottom:3em;
+}
+
+.footer-header {
+    font-size:1.5em;
+}
+
+.col.bags-body-ctr, .col.special-assist-body-ctr,
+.row.airport-body-ctr, .col.boarding-pass-body-ctr,
+.col.contact-newgen-body-ctr, .col.faq-body-ctr,
+.col.receipts-refunds-body-ctr, .col.business-programs-body-ctr,
+.col.trip-insurance-body-ctr, .container.login-signup, .container.payments,
+.container.reviews {
+    margin-top:3em;
+}
+
+.row.login-signup-body-ctr, .row.payments-body-ctr, .row.reviews-body-ctr{
+    margin-bottom:2.5em;
+}
+
+.col.bags-body-ctr#first-col, .col.bags-body-ctr#second-col,
+.col.boarding-pass-body-ctr#first-col, .col.boarding-pass-body-ctr#second-col,
+.col.contact-newgen-body-ctr#first-col, .col.contact-newgen-body-ctr#second-col,
+.col.faq-body-ctr#first-col, .col.receipts-refunds-body-ctr#first-col,
+.col.receipts-refunds-body-ctr#second-col, .col.business-programs-body-ctr#first-col,
+.col.trip-insurance-body-ctr#first-col, .col.trip-insurance-body-ctr#second-col{
+    padding-bottom: 1.7em;
+    border-bottom: dashed #EEE8AA;
+}
+
+.col.bags-body-ctr#first-col, .col.bags-body-ctr#second-col,
+.row.faq-body-ctr#first-col{
+    margin-bottom:5em;
+}
+
+.col.special-assist-body-ctr#first-col, .col.special-assist-body-ctr#second-col,
+.col.faq-body-ctr#first-col h3 {
+    margin-bottom:2em;
+}
+
+#last-col {
+    margin-bottom:3em;
+}
+
+.col.faq-body-ctr#eighth-col h3, .faq-body-ctr h4,
+.col.receipts-refunds-body-ctr#first-col h2, .col.trip-insurance-body-ctr#first-col h3,
+.col.trip-insurance-body-ctr#second-col h3, .col.trip-insurance-body-ctr#third-col h3{
+    margin-bottom:1em;
+}
+
+.receipts-refunds-div#rrdiv-1 {
+    margin-bottom:1.5em;
+}
+
+.col-md-6.trip-insurance-body-ctr h4 {
+    margin-bottom:0.83em;
+}
+
+.col.bags-body-ctr h3, .col.special-assist-body-ctr h3,
+.col.special-assist-body-ctr h4, .col.airport-body-ctr h4,
+.col.boarding-pass-body-ctr h3, .col.boarding-pass-body-ctr p#boarding-pass-info,
+.col-md-4.airport-body-ctr#second-col h4, .col-md-4.airport-body-ctr#third-col h4,
+.col-md-4.airport-body-ctr#fourth-col, .col-md-4.airport-body-ctr#fifth-col,
+.col-md-4.airport-body-ctr#sixth-col, .col-md-4.airport-body-ctr#seventh-col,
+.col.contact-newgen-body-ctr#second-col h4, .faq-body-ctr.h4,
+.col.receipts-refunds-body-ctr h4, .col.business-programs-body-ctr h4,
+.col.trip-insurance-body-ctr#first-col h4, .col-md-6.trip-insurance-body-ctr h4{
+    color:#708090;
+}
+
+.col.bags-body-ctr p, .col.special-assist-body-ctr p,
+.row.special-assist-ul ul li, .row.mobile-app-ol ol li,
+.row.mobile-app-ul ul li, #mobile-passes-info, #flight-notice-info,
+#download-app-info, .contact-newgen-body-ctr.p, .row.contact-newgen-app-ul ul li,
+.row.faq-body-ul ul li, .receipts-refunds-body-ctr.p, .business-programs-body-ctr.p,
+.trip-insurance-body-ctr.p, .row.trip-insurance-ul ul li,
+.col-md-6.login-signup-body-ctr#second-col p, .col-md-6.login-signup-body-ctr#third-col p,
+.col-md-6.payments-body-ctr#second-col p, .col-md-6.payments-body-ctr#third-col p,
+.col-md-6.reviews-body-ctr#second-col p, .col-md-6.reviews-body-ctr#third-col p{
+    color: #2F4F4F;
+}
+
+.col.bags-body-ctr a, .col.special-assist-body-ctr a,
+.col.special-assist-body-ctr p, .row.airport-body-ctr p,
+#first-col a, #newgen-app, #app-store, #google-play-store,
+#third-col a, .contact-newgen-body-ctr.a, .faq-body-ctr.a,
+.receipts-refunds-body-ctr.a, .business-programs-body-ctr.a,
+.trip-insurance-body-ctr.a{
+    color: #4169E1;
+}
+
+.col.airport-body-ctr#first-col h3, .col.contact-newgen-body-ctr#first-col h3,
+.col.contact-newgen-body-ctr#second-col h3, .col.contact-newgen-body-ctr#third-col h3,
+.col.faq-body-ctr#first-col h3, .col.faq-body-ctr#eighth-col h3,
+.col.receipts-refunds-body-ctr#first-col h3, .col.receipts-refunds-body-ctr#eighth-col h3,
+.col.business-programs-body-ctr#first-col h3, .col.business-programs-body-ctr#second-col h3,
+.col.trip-insurance-body-ctr#first-col h3, .col.trip-insurance-body-ctr#second-col h3,
+.col.trip-insurance-body-ctr#third-col h3, .col-md-6.login-signup-body-ctr#second-col h3,
+.col-md-6.login-signup-body-ctr#third-col h3, .col-md-6.payments-body-ctr#second-col h3,
+.col-md-6.reviews-body-ctr#second-col h3, .col-md-6.payments-body-ctr#third-col h3,
+.col-md-6.reviews-body-ctr#third-col h3,{
+    color: #483D8B;
+}
+
+.col.airport-body-ctr#first-col h2, .col.contact-newgen-body-ctr#first-col h2,
+.col.faq-body-ctr#first-col h2, .col.receipts-refunds-body-ctr#first-col h2,
+.col.business-programs-body-ctr#first-col h2,
+.col.trip-insurance-body-ctr#first-col h2, .col.login-signup-body-ctr#first-col h2,
+.col.payments-body-ctr#first-col h2, .col.reviews-body-ctr#first-col h2{
+    color: #87CEEB;
+}
+
+
+.row.mobile-app-ol, .row.mobile-app-ul,
+.row.special-assist-ul, .row.contact-newgen-app-ul,
+.row.faq-body-ul, .row.business-programs-ul, .row.trip-insurance-ul{
+    margin-left:1em;
+}
+
+#first-col h2 {
+    margin-bottom: 0.8em;
+}
+
+.row.airport-body-ctr img {
+    width: 80%;
+    height:61%;
+    margin-top:0.4em;
+    margin-bottom:1em;
+}
+
+.row.airport-body-ctr img, #mobile-app-boarding-img {
+    border-radius:4px;
+}
+
+.row.airport-body-ctr#second-row img {
+    height:55%;
+}
+
+.row.airport-body-ctr#second-row {
+    margin-bottom:4.4em;
+}
+
+.container.airport, .container.boarding-pass {
+    margin-bottom:3.5em;
+}
+
+.col.boarding-pass-body-ctr h4{
+    margin-top:1em;
+}
+
+.app-store-div, .contact-newgen-div, .faq-body-div,
+.receipts-refunds-div, .receipts-refunds-div, .travel-experience-div {
+    line-height:0.9em;
+}
+
+.receipts-refunds-body-ctr.p {
+    line-height:1.2em;
+}
+
+.col.boarding-pass-body-ctr#second-col h4 {
+    margin-bottom:0.7em;
+}
+
+#mobile-app-boarding-img{
+    width:100%;
+}
+
+#myMobileTab li button {
+    padding-left:4.87em;
+    padding-right:4.87em;
+}
+
+#myTripTab li button {
+    padding-left:5.333em;
+    padding-right:5.333em;
+}
+
+#myMobileTab li button, #myTripTab li button {
+    background: #FAF0E6;
+    cursor: pointer;
+}
+
+#plane-landing-img, #plane-over-miami-img {
+    margin-bottom: 0.7em;
+    width: 100%;
+}
+
+#myTripTab {
+    margin-bottom: 1.5em;
+}
+
+#scuba-diving-img, #plane-over-miami-img, #plane-landing-img {
+    width: 100%;
+    border-radius:4px;
+}
+
+.form-group.col-md-4#first-group, .form-group.col-md-4#fourth-group,
+.form-group.col-md-4#second-group,.form-group.col-md-4#third-group,
+.container.current-offers, .container.other-offers, #sp-grp-1,
+#sp-grp-2, #sp-grp-3, #sp-grp-4, #flight-status-submit-btn,
+.container.airport {
+    margin-left:1em;
+}
+
+.form-group.col-md-4#first-group, .form-group.col-md-4#second-group,
+.form-group.col-md-4#third-group, .form-group.col-md-4#fourth-group,
+.form-group.col-md-4#fifth-group, .form-group.col-md-4#sixth-group {
+    width:100%;
+    max-width:16.5em;
+}
+
+#sp-grp-1 ,#sp-grp-2, #sp-grp-3, #sp-grp-4 {
+    width: 100%;
+    max-width:10.4em;
+}
+
+#memory-offers-col, #bonus-offers-col {
+    margin-left:2.1em;
+}
+
+#memory-title-row h4 {
+    width:90%;
+}
+
+#memory-links-row p {
+    width:82%;
+}
+
+#miles-title-row h4 {
+    width:67%;
+}
+
+.col.help p a, .col.newgen-info p a, .col.extras p a {
+    color:#212529;
+}
+
+#log-in, #search-payments, #search-reviews {
+    color: white;
+}
+
+@media screen and (max-width:1199px) {
+
+    #first-nav, #second-nav, #third-nav, .nav-item.dropdown, #login-button{
+        margin-left:5.8em;
+    }
+
+    .container.main-container {
+        margin:-10em 5.6em -10em 5.6em;
+        width: 47.2em;
+    }
+
+    .nav.nav-tabs button {
+        padding-left:3.0935em;
+        padding-right:3.0935em;
+    }
+
+    #book-submit-btn {
+        padding: 2px 75px 2px 75px;
+    }
+
+    #myMobileTab li button {
+        padding-left:3.462em;
+        padding-right:3.462em;
+    }
+
+    #myTripTab li button {
+        padding-left:3.926em;
+        padding-right:3.926em;
+    }
+
+    .form-group.col-md-4#first-group, .form-group.col-md-4#second-group,
+    .form-group.col-md-4#third-group, .form-group.col-md-4#fourth-group,
+    .form-group.col-md-4#fifth-group, .form-group.col-md-4#sixth-group {
+        width:100%;
+        max-width:13.8em;
+    }
+
+    #sp-grp-1 ,#sp-grp-2, #sp-grp-3, #sp-grp-4 {
+        max-width:21.4em;
+    }
+
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light{
+        background: #F5EBE9 !important;
+        margin-left: -10.02em;
+        margin-right: -10.75em;
+    }
+
+    .navbar-brand {
+        margin-left: 8.29em;
+        margin-right: -1.83em;
+    }
+
+    #logout-button  {
+        margin-left:5.1em;
+    }
+
+    .user-full-name {
+        margin:0.434em auto 1em 42em;
+    }
+
+}
+
+@media screen and (max-width: 991px){
+
+    .navbar-brand {
+        margin-top:0.02em;
+    }
+
+    #first-nav, #second-nav, #third-nav, .nav-item.dropdown, #login-button{
+        margin-left:10.46em;
+    }
+
+    #first-nav, #second-nav, #third-nav{
+        line-height:1.9em;
+    }
+
+    #login-button, #logout-button {
+        text-align: center;
+        width:100px;
+    }
+
+    .navbar-toggler {
+        margin-right:15.2em;
+    }
+
+    .d-block.w-100 {
+        width: 736px;
+        height: 620px !important;
+    }
+
+    .nav-item.dropdown {
+        margin-bottom:0.8em;
+    }
+
+    .container.main-container {
+        margin:-10em 3.6em -10em 3.6em;
+        width: 35.89em;
+    }
+
+    .nav.nav-tabs button {
+        padding-left:1.68em;
+        padding-right:1.68em;
+    }
+
+    #book-submit-btn {
+        padding: 2px 46px 2px 46px;
+    }
+
+    #footer-row {
+        display: inline-block;
+    }
+
+    .col.help {
+        margin-top:3em;
+    }
+
+    .col.help, .col.newgen-info, .col.extras{
+        margin-left:29.2em;
+    }
+
+    hr {
+        width: 42em;
+    }
+
+    .top-left {
+      position: absolute;
+      top: 2.15em;
+      left: 1.75em;
+    }
+
+    .top-left-bottom {
+      position: absolute;
+      top: 11.6em;
+      left: 4.3em;
+    }
+
+    #first-image-text, #second-image-text {
+        font-size:2.9em;
+    }
+
+    .container.other-offers {
+        display: none;
+    }
+
+    #carouselExampleIndicators {
+        margin: 0.34em auto 59em auto;
+    }
+
+    .row.airport-body-ctr img {
+        width: 103%;
+    }
+
+    #myMobileTab li button {
+        padding-left:1.587em;
+        padding-right:1.587em;
+    }
+
+    #myTripTab li button {
+        padding-left:2.049em;
+        padding-right:2.049em;
+    }
+
+    .form-group.col-md-4#first-group, .form-group.col-md-4#second-group,
+    .form-group.col-md-4#third-group, .form-group.col-md-4#fourth-group,
+    .form-group.col-md-4#fifth-group, .form-group.col-md-4#sixth-group {
+        width:100%;
+        max-width:10.2em;
+    }
+
+    #sp-grp-1 ,#sp-grp-2, #sp-grp-3, #sp-grp-4 {
+        max-width:15.8em;
+    }
+
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light{
+        background: #F5EBE9 !important;
+        margin-left: -10.4em;
+        margin-right: -19.4em;
+    }
+
+    #logout-button  {
+        margin-left:10.46em;
+    }
+
+    .user-full-name {
+        margin:0.434em auto 1em 0.7em;
+    }
+
+}
+
+@media screen and (max-width: 767px){
+
+    .d-block.w-100 {
+        width: 631px;
+    }
+
+    .top-left {
+      position: absolute;
+      top: 3.19em;
+      left: 1.75em;
+    }
+
+    .top-left-bottom {
+      position: absolute;
+      top: 11.6em;
+      left: 3.46em;
+    }
+
+    #carouselExampleIndicators {
+        margin: 0.34em auto 94em auto;
+    }
+
+    #first-image-text, #second-image-text {
+        font-size:2.38em;
+    }
+
+   .container.main-container {
+        width: 25.14em;
+    }
+
+   .nav.nav-tabs button#flight-status-tab {
+        width: 23.22em;
+   }
+
+   .nav.nav-tabs button#round-trip-tab, .nav.nav-tabs button#oneway-trip-tab,
+   .nav.nav-tabs button#trips-tab{
+        padding-left:1.41em;
+        padding-right:1.41em;
+   }
+
+   hr {
+        width: 27em;
+   }
+
+   .col-md-4.airport-body-ctr#sixth-col {
+        margin-bottom:1.44em;
+    }
+
+   .col-md-4.airport-body-ctr#second-col {
+        margin-bottom:1em;
+   }
+
+   .col-md-4.airport-body-ctr#third-col {
+        margin-bottom:-1em;
+   }
+
+   .col-md-4.airport-body-ctr#fourth-col {
+        margin-bottom:-6em;
+   }
+
+   .row.airport-body-ctr img {
+        width: 76%;
+   }
+
+   #myMobileTab, #myMobileTab li button,
+   #myTripTab, #myTripTab li button{
+        display: block;
+        max-width: 520px;
+        width:100%;
+   }
+
+   .form-group.col-md-4#first-group, .form-group.col-md-4#second-group,
+   .form-group.col-md-4#third-group, .form-group.col-md-4#fourth-group,
+   .form-group.col-md-4#fifth-group, .form-group.col-md-4#sixth-group {
+        width:100%;
+        max-width:21.7em;
+   }
+
+   #sp-grp-1 ,#sp-grp-2, #sp-grp-3, #sp-grp-4 {
+        max-width:20.8em;
+   }
+
+}
+
+@media screen and (max-width: 536px){
+
+   .container.main-container {
+        margin:-10em 2.5em -10em 2.5em;
+        width: 24.26em;
+   }
+
+   .nav.nav-tabs button#flight-status-tab {
+     width: 22.35em;
+   }
+
+    .nav.nav-tabs button#round-trip-tab, .nav.nav-tabs button#oneway-trip-tab,
+    .nav.nav-tabs button#trips-tab{
+         padding-left:1.266em;
+         padding-right:1.266em;
+    }
+
+   .form-group.col-md-4#first-group, .form-group.col-md-4#second-group,
+   .form-group.col-md-4#third-group, .form-group.col-md-4#fourth-group,
+   .form-group.col-md-4#fifth-group, .form-group.col-md-4#sixth-group {
+        width:100%;
+        max-width:21.2em;
+   }
+
+   #carouselExampleIndicators {
+    margin: 0.34em auto 96.2em auto;
+   }
+
+   .col-md-6.login-signup-body-ctr#second-col, .col-md-6.payments-body-ctr#second-col,
+    .col-md-6.reviews-body-ctr#second-col {
+        margin-bottom: 2.7em;
+   }
+
+}
+

@@ -1,0 +1,12 @@
+
+.container.footer, .footer-outer-container {
+    margin-top:1em;
+}
+
+.row.payments-body-ctr img, .row.reviews-body-ctr img{
+    width: 74%;
+    height:52%;
+    margin-top:0.4em;
+    margin-bottom:1em;
+    border-radius:4px;
+}

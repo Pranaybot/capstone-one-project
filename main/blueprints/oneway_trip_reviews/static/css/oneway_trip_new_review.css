@@ -1,0 +1,22 @@
+
+h2.review-message {
+    margin-bottom: 1.73em;
+    color: #343a40;
+    font-weight: 700;
+}
+
+.container.footer, .footer-outer-container {
+    margin-top:3.62em;
+}
+
+#new_review_form input.form-control {
+      font-size: 18px;
+      font-weight: bold;
+      padding: 12px;
+      margin-top: 1em;
+      margin-bottom:1em;
+}
+
+.review-message {
+    margin-bottom:1.73em;
+}

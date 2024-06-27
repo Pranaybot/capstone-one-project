@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block link %}
+    <link rel="stylesheet" type="text/css"
+          href="../../../../static/css/trip_reviews_and_payments.css">
+{% endblock %}
+
+{% block title %}Newgen Airlines - One Way Trip Reviews{% endblock %}
+
+
+{% block content %}
+<div class="container has-reviews {% if not reviews %}has-forgot-password-background{% endif %}">
+    {% if reviews %}
+        {% for review in reviews %}
+            <div class="card border-primary">
+              <div class="card-body">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">One Way Trip Payment ID:
+                      <span id="payment_tab">{{ rating.oneway_trip_review_payment_id }}</span></li>
+                  <li class="list-group-item">One Way Trip Review ID:
+                      <span id="review_tab">{{ rating.oneway_trip_review_payment_id }}</span></li>
+                  <li class="list-group-item">Rating:
+                      <span id="review_rating">{{ review.rating }}</span></li>
+                  <li class="list-group-item">Review:
+                      <span id="review">{{ review.review }}</span></li>
+                  <li class="list-group-item">Review date:
+                      <span id="review_date">{{ review.timestamp }}</span></li>
+                </ul>
+              </div>
+              <div class="card-footer">
+                <a href="{{ url_for('oneway_trip_reviews.oneway_trip_reviews_destroy',
+                    review_id=review.id) }}" class="btn btn-primary float-end"
+                   id="delete_button">Delete Review</a>
+                <a href="{{ url_for('oneway_trip_reviews.oneway_trip_reviews_update',
+                    review_id=review.ed) }}" class="btn btn-primary float-end"
+                   id="edit_button">Edit Review</a>
+              </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <h1>No One-Way Trip Reviews Yet!</h1>
+        <p>It looks like there aren't any reviews for one-way trips at this time. Be the
+            first to share your experience!</p>
+        <p>If you've recently completed a one-way trip, consider leaving a review to help others
+            make informed decisions.</p>
+    {% endif %}
+</div>
+{% endblock %}
+

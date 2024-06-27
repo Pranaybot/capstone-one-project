@@ -1,0 +1,50 @@
+
+.navbar-brand {
+    margin-left: 19em;
+}
+
+.container.footer, .footer-outer-container {
+    margin-top:1em;
+}
+
+.row.login-signup-body-ctr img {
+    width: 74%;
+    height:52%;
+    margin-top:0.4em;
+    margin-bottom:1em;
+    border-radius:4px;
+}
+
+@media screen and (max-width:1199px) {
+
+    .navbar-brand {
+        margin-left: 6.8em;
+    }
+
+}
+
+@media screen and (max-width: 991px) {
+
+    .navbar-toggler {
+        margin-right:13em;
+    }
+
+    #first-nav, #second-nav, #third-nav, .nav-item.dropdown, #login-button{
+        margin-left:9.17em;
+    }
+
+    .navbar-brand {
+        margin-left: 7.3em;
+    }
+
+
+
+}
+
+@media screen and (max-width: 767px) {
+
+    .navbar-toggler {
+        margin-right:12.6em;
+    }
+
+}

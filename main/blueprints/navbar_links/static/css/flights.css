@@ -1,0 +1,84 @@
+
+.container.footer, .footer-outer-container {
+    margin-top:10.23em;
+}
+
+.flight_form input.form-control {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px;
+  margin-top: 0.5em;
+  margin-bottom:0.5em;
+}
+
+.flight_form input, .flight_form select {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.flight_form input, .flight_form select, .btn.btn-primary.btn-block.btn-lg {
+    width:75%;
+}
+
+.row.justify-content-md-center {
+    margin-top:3.95em;
+}
+
+.join-message {
+    margin-top:1.73em;
+    margin-bottom:1.73em;
+}
+
+.btn.btn-primary.btn-block.btn-lg {
+    margin-top:2.45em;
+}
+
+.container.flight-forms {
+    margin-left:2.4em;
+}
+
+@media screen and (max-width:1199px) {
+
+    .navbar-brand {
+        margin-left: 10em;
+    }
+
+    .user-full-name {
+        margin:0.434em auto 1em 43.8em;
+    }
+
+}
+
+@media screen and (max-width: 991px) {
+
+    .navbar-toggler {
+        margin-right:13em;
+    }
+
+    #first-nav, #second-nav, #third-nav, .nav-item.dropdown,
+    #login-button, #logout-button{
+        margin-left:12.4em;
+    }
+
+    .user-full-name {
+        margin:0.434em auto 1em 2.4em;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+
+    .navbar-toggler {
+        margin-right:12.6em;
+    }
+
+    #first-form {
+        margin-bottom: 1.89em;
+    }
+
+    .container.flight-forms h2 {
+        width:84%;
+    }
+
+}
+

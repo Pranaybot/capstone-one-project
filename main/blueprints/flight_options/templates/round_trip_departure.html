@@ -1,0 +1,191 @@
+{% extends 'base.html' %}
+
+{% block link %}
+    <link rel="stylesheet" type="text/css" href="../../../../static/css/oneway_trip.css">
+{% endblock %}
+
+{% block title %}Newgen Airlines - Round Trips Departure page{% endblock %}
+
+
+{% block content %}
+    <div class="container mt-5">
+        <h3>Hi, you reached the round trips departure page</h3>
+        {% set best_flights = response['best_flights'] %}
+        {% set other_flights = response['other_flights'] %}
+        {% set depart_date = depart_date %}
+        {% if best_flights and other_flights %}
+            {% for best_flight in best_flights %}
+                <div class="flight-card">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h5 class="card-title">Flight Details</h5>
+                                    <ul class="list-group list-group-flush" id="flightDetails">
+                                        <li class="list-group-item">
+                                            <span class="fw-bold">From:</span>
+                                              <span id="fromCity">{{ best_flight.flights[0].departure_airport.name }}</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <span class="fw-bold">To:</span>
+                                            <span id="toCity">{{ best_flight.flights[0].arrival_airport.name }}</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <span class="fw-bold">Airline:</span>
+                                              <span id="airline">{{ best_flight.flights[0].airline }}</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <span class="fw-bold">Departure:</span>
+                                            <span id="departureDate">{{ depart_date }}</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <span class="fw-bold">Duration:</span>
+                                            <span id="flightDuration">{{ best_flight.total_duration }}</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                  </div>
+                  <form class="round-trip-booking-form"
+                        action="{{ url_for('flight_options.round_trip_arrival') }}" method="get">
+                       <input type="hidden" name="fromAirportCode"
+                              value="{{ best_flight.flights[0].departure_airport.id }}">
+                       <input type="hidden" name="fromAirportName"
+                               value="{{ best_flight.flights[0].departure_airport.name }}">
+                       <input type="hidden" name="toAirportCode"
+                              value="{{ best_flight.flights[0].arrival_airport.id }}">
+                      <input type="hidden" name="toAirportName"
+                               value="{{ best_flight.flights[0].arrival_airport.name }}">
+                       <input type="hidden" name="airline"
+                              value="{{ best_flight.flights[0].airline }}">
+                       <input type="hidden" name="fromDate"
+                              value="{{ depart_date }}">
+                      <input type="hidden" name="duration"
+                              value="{{ best_flight.total_duration }}">
+                      <input type="hidden" name="departurePrice"
+                              value="{{ best_flight.price }}">
+                      <input type="hidden" name="departToken"
+                              value="{{ best_flight.departure_token }}">
+                      <button type="submit" class="btn btn-primary mt-3">Book Now</button>
+                  </form>
+                </div>
+            {% endfor %}
+            {% for flight in other_flights %}
+                <div class="flight-card">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h5 class="card-title">Flight Details</h5>
+                                        <ul class="list-group list-group-flush" id="flight_details">
+                                            <li class="list-group-item">
+                                                <span class="fw-bold">From:</span>
+                                                  <span id="from_city">{{ flight.flights[0].departure_airport.name }}</span>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <span class="fw-bold">To:</span>
+                                                <span id="to_city">{{ flight.flights[0].arrival_airport.name }}</span>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <span class="fw-bold">Airline:</span>
+                                                  <span id="airline_name">{{ flight.flights[0].airline }}</span>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <span class="fw-bold">Departure:</span>
+                                                <span id="departure_date">{{ depart_date }}</span>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <span class="fw-bold">Duration:</span>
+                                                <span id="flight_duration">{{ flight.total_duration }}</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                      </div>
+                      <form class="round-trip-booking-form"
+                            action="{{ url_for('flight_options.round_trip_arrival') }}" method="get">
+                            <input type="hidden" name="fromAirportCode"
+                              value="{{ flight.flights[0].departure_airport.id }}">
+                            <input type="hidden" name="fromAirportName"
+                               value="{{ flight.flights[0].departure_airport.name }}">
+                            <input type="hidden" name="toAirportCode"
+                              value="{{ flight.flights[0].arrival_airport.id }}">
+                            <input type="hidden" name="toAirportName"
+                               value="{{ flight.flights[0].arrival_airport.name }}">
+                           <input type="hidden" name="airline"
+                                  value="{{ flight.flights[0].airline }}">
+                           <input type="hidden" name="fromDate"
+                                  value="{{ depart_date }}">
+                          <input type="hidden" name="duration"
+                                  value="{{ flight.total_duration }}">
+                          <input type="hidden" name="departurePrice"
+                                  value="{{ flight.price }}">
+                          <input type="hidden" name="departToken"
+                                  value="{{ flight.departure_token }}">
+                          <button type="submit" class="btn btn-primary mt-3">Book Now</button>
+                      </form>
+                </div>
+            {% endfor %}
+        {% else %}
+            {% for flight in other_flights %}
+                <div class="flight-card">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h5 class="card-title">Flight Details</h5>
+                                        <ul class="list-group list-group-flush" id="flight_dts">
+                                            <li class="list-group-item">
+                                                <span class="fw-bold">From:</span>
+                                                  <span id="from_cty">{{ flight.flights[0].departure_airport.name }}</span>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <span class="fw-bold">To:</span>
+                                                <span id="to_cty">{{ flight.flights[0].arrival_airport.name }}</span>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <span class="fw-bold">Airline:</span>
+                                                  <span id="aln_name">{{ flight.flights[0].airline }}</span>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <span class="fw-bold">Departure:</span>
+                                                <span id="dpt_date">{{ depart_date }}</span>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <span class="fw-bold">Duration:</span>
+                                                <span id="flight_time">{{ flight.total_duration }}</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                      </div>
+                      <form class="round-trip-booking-form"
+                            action="{{ url_for('flight_options.round_trip_arrival') }}" method="get">
+                            <input type="hidden" name="fromAirportCode"
+                              value="{{ flight.flights[0].departure_airport.id }}">
+                            <input type="hidden" name="fromAirportName"
+                               value="{{ flight.flights[0].departure_airport.name }}">
+                            <input type="hidden" name="toAirportCode"
+                              value="{{ flight.flights[0].arrival_airport.id }}">
+                            <input type="hidden" name="toAirportName"
+                               value="{{ flight.flights[0].arrival_airport.name }}">
+                           <input type="hidden" name="airline"
+                                  value="{{ flight.flights[0].airline }}">
+                           <input type="hidden" name="fromDate"
+                                  value="{{ depart_date }}">
+                          <input type="hidden" name="duration"
+                                  value="{{ flight.total_duration }}">
+                          <input type="hidden" name="departurePrice"
+                                  value="{{ flight.price }}">
+                          <input type="hidden" name="departToken"
+                                  value="{{ flight.departure_token }}">
+                          <button type="submit" class="btn btn-primary mt-3">Book Now</button>
+                      </form>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+{% endblock %}
