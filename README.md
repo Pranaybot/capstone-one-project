@@ -1,10 +1,8 @@
 # Newgen - A Flight Booking System
 
-***
 
 ## Summary - Project Description
 
-***
 
 Newgen is a flight booking application. It allows users to book nonstop
 one-way and round trip flights. While the application does not retrieve
@@ -18,7 +16,6 @@ You can view the deployed application here: https://capstone-one-4nvd.onrender.c
 
 ## Tech Stack
 
-***
 
 ### Frontend
 
@@ -29,8 +26,6 @@ HTML, JS, CSS, Bootstrap
 Python, Flask, SQLAlchemy, WTForms, PostgreSQL
 
 ## Features
-
-***
 
 ### Secure User Sign-in / Form Validation
 
@@ -61,8 +56,6 @@ People using the site can interact with the chatbot from Botpress. It answers ba
 are stored for the project, creating an account and logging in, and information about the site's mission.
 
 ## Project setup and build
-
-***
 
 ### A) Python installation
 1. If you don't have Python installed, go to this link, https://www.python.org/, click on Downloads.
@@ -170,11 +163,7 @@ create the `venv` folder and `source venv/bin/activate` to use your `venv` envir
 Like the previous step, make sure you are in your root directory.
 7. To deactivate your `venv` environment, type `deactivate` in your command prompt.
 
-
-   
 ## Tips and Troubleshooting
-
-***
 
 1. If you have a python version less than 3.0 or above, use the `python` command. Otherwise, use `python3`.
 For python versions less than 3.0, use `pip` or `pip2`. Otherwise, use `pip` or `pip3`. 
@@ -200,14 +189,10 @@ you want to edit the timestamp value whe you created the review, simply remove t
 
 ## Running Tests
 
-***
-
 To run the tests from the repository, make sure you are in your project directory and enter the command, 
 `python3 -m unittest`or `python -m unittest` if you have a version of python less than 3.0.
 
 ## Future Development
-
-***
 
 1. Allow users to change password / have a forgotten password system in place.
 2. Allow users to delete their own accounts.
@@ -219,4 +204,3 @@ chooses to book the flight(s).
 that may or may not delay flights.
 6. Notify users if there are any price drops for flights and allow them to save
 destinations they are interested in.
-
